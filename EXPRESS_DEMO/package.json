@@ -1,0 +1,14 @@
+{
+  "name": "expession_demo",
+  "version": "1.0.0",
+  "description": "express demo 1",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rwishwajith",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
