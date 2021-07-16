@@ -1,6 +1,22 @@
 const express = require('express');
+const authenticationHandler = require ("./Middlewares/authentication"); //link the authentication
+const loggerHandler = require("./Middlewares/logger");
 const app = express();
 
+app.use(express.json()); //Parse JSON objects in req
+app.use(authenticationHandler);
+app.use(loggerhandler);
+
+//middleware creation
+app.use((req, res, next ) => {
+    console.log("Middleware 1 is executing.....");
+    next();
+});
+
+app.use((req, res, next ) => {
+    console.log("Middleware 2 is executing.....");
+    res.send();
+});
 let beararry = [
     {id:1,name = 'Black bear', type =  'American', place = 'North America'},
     {id:2,name = 'Polar bear', type =  'White', place = 'North Pole'},
